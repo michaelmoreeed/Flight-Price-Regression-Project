@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 import sklearn
 import category_encoders
+import xgboost
 Model = joblib.load("Model.pkl")
 Inputs = joblib.load("Inputs.pkl")
 
