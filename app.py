@@ -35,7 +35,7 @@ def main():
     Month_of_Journey = st.selectbox("Month of Journey",['March', 'May', 'June', 'April'])
     Dep_Time_Category = st.selectbox("Departure Time",['Night', 'Early Morning', 'Morning', 'Evening', 'Afternoon'])
     Arrival_Time_Category = st.selectbox("Arrival Time",['Early Morning', 'Afternoon', 'Night', 'Morning', 'Evening'])
-    Duration_minutes = st.slider("Duration from Departure to Arrival(minutes)" ,  min_value=60, max_value=2900, value=0, step=1)
+    Duration_minutes = st.slider("Duration from Departure to Arrival(minutes)" ,  min_value=60, max_value=2900, value=100, step=1)
     if st.button("Predict"):
         Results = Make_Prdiction(Airline, Source, Destination, Total_Stops, Additional_Info,Day_of_Journey, Month_of_Journey, Dep_Time_Category,Arrival_Time_Category, Duration_minutes)
         st.text(f"The total Price is : {Results.astype(int)}")
